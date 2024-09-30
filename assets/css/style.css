@@ -26,6 +26,11 @@ a:hover {
   font-family: "Inter", sans-serif;
 }
 
+/* Override new.css body */
+body {
+	max-width: 1800px;
+}
+
 /* Chart Layout */
 .tableframe {
   overflow: auto;
