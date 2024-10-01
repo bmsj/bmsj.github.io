@@ -40,8 +40,7 @@ body {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  max-width: 240px;
-  background-color: #666666;
+  background-color: #333333;
   color: #fff;
   text-align: center;
   border-radius: 6px;
