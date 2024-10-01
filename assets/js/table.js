@@ -209,7 +209,7 @@ const tableData = {
     if (row.zure_check) {
 		return `<span class="tooltip"> ✅ <span class="tooltiptext">'${row.zure_check}'</span></span>`;
 	} else {
-		return `<span class="tooltip"> ❌ <span class="tooltiptext">` + languagePrefix === "ko" ? "키음 추가 또는 재배치 있음" : "キー音の追加または再配置あり" + `</span></span>`;
+		return `<span class="tooltip"> ❌ <span class="tooltiptext">` + (languagePrefix === "ko" ? "키음 추가 또는 재배치 있음" : "キー音の追加または再配置あり") + `</span></span>`;
 	}
   },  
 };
