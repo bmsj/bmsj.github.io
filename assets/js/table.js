@@ -28,7 +28,6 @@ function makeBMSTable() {
     paging: false,
     info: false,
     lengthChange: false,
-    columnDefs: [{ orderable: false, targets: 0 }],
 
     language: {
       url: `//cdn.datatables.net/plug-ins/2.1.3/i18n/${languagePrefix}.json`,
@@ -205,6 +204,13 @@ const tableData = {
   tableComment: function (data, type, row) {
     return row.comment || "";
   },
+
+  tableZurecheck: function (data,type,row) {
+    if (row.zure_check) {
+		return `<span class="tooltip"> ✅ <span class="tooltiptext">'${row.zure_check}'</span></span>`;
+	} else {
+		return `<span class="tooltip"> ❌ <span class="tooltiptext">` + languagePrefix === "ko" ? "키음 추가 또는 재배치 있음" : "キー音の追加または再配置あり" + `</span></span>`;
+	}
 };
 
 const DEFAULT_COLUMNS = [
@@ -213,6 +219,8 @@ const DEFAULT_COLUMNS = [
     width: "1%",
     data: "level",
     type: "natural",
+    orderable: false,
+    searchable: false,    
     render: tableData.tableLevel,
   },
   {
@@ -261,5 +269,10 @@ const DEFAULT_COLUMNS = [
     title: "Comment",
     width: "25%",
     render: tableData.tableComment,
+  },
+  {
+    title: "Zure<br />Check",
+    width: "1%",
+    render: tableData.tableZurecheck,
   },
 ];
