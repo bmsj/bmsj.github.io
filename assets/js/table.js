@@ -28,6 +28,7 @@ function makeBMSTable() {
     paging: false,
     info: false,
     lengthChange: false,
+    order: [],
 
     language: {
       url: `//cdn.datatables.net/plug-ins/2.1.3/i18n/${languagePrefix}.json`,
