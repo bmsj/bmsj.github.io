@@ -211,6 +211,7 @@ const tableData = {
 	} else {
 		return `<span class="tooltip"> ❌ <span class="tooltiptext">` + languagePrefix === "ko" ? "키음 추가 또는 재배치 있음" : "キー音の追加または再配置あり" + `</span></span>`;
 	}
+  },  
 };
 
 const DEFAULT_COLUMNS = [
