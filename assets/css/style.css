@@ -85,27 +85,27 @@ body {
 }
 
 table.dataTable.display tbody tr.state1 {
-  background-color: #91e7fa;
+  background-color: #6BD089;
 }
 
 table.dataTable.display tbody tr.state2 {
-  background-color: #9be8b7;
+  background-color: #BFB500;
 }
 
 table.dataTable.display tbody tr.state3 {
-  background-color: #e6e879;
+  background-color: #FFB27D;
 }
 
 @media (prefers-color-scheme: dark) {
   table.dataTable.display tbody tr.state1 {
-    background-color: #254d54;
+    background-color: #085820;
   }
 
   table.dataTable.display tbody tr.state2 {
-    background-color: #284a31;
+    background-color: #807900;
   }
 
   table.dataTable.display tbody tr.state3 {
-    background-color: #575326;
+    background-color: #BF5B16;
   }
 }
