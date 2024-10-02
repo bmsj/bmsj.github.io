@@ -133,8 +133,9 @@ const tableData = {
   tableTitle: function (data, type, row) {
     let lr2irURL =
       "http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=";
+    let sabunName = row.sabun_name;
     lr2irURL += row.md5;
-    return `<a href='${lr2irURL}' target='_blank'>${data}</a>`;
+    return `<a href='${lr2irURL}' target='_blank'>${data} ${sabunName}</a>`;
   },
 
   tableScore: function (data) {
