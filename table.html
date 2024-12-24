@@ -38,10 +38,10 @@
 
       Blue = registered in Satellite / Green = registered in other diff tables / Red = recently updated <br>
       Most sabun files are also downloadable at <a href="https://stellabms.xyz/uploader" target="_blank">Stella Uploader</a>. <br>
-      Unless mentioned otherwise, feel free to suggest/add these sabuns to any diff tables. I would be happy if you tell me afterwards.<br><br>
+      Unless mentioned otherwise, feel free to suggest/add these sabuns to any diff tables. I would be thankful if you tell me afterwards.<br><br>
       
       <!-- Difficulty scale table -->
-    <div style="width:45%; float:left;">
+    <div style="max-width:1000px;">
       <table>
         <caption><h4>Difficulty Scale</h4></caption>
         <thead>
@@ -56,6 +56,36 @@
         </tbody>
       </table>
     </div>  
+
+    <!-- #TOTAL Calc -->
+    <div style="max-width:1000px;">
+      <table>
+        <caption><h4>#TOTAL Calculation (since late 2024)</h4></caption>
+        <thead>
+          <tr>
+            <th scope="col">~1000 Notes</th> <th scope="col">1000~2000 Notes</th> <th scope="col">2000~ Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> 250 + 0.08 * N </td> <td>330 + 0.11 * (N - 1000)</td> <td>440 + 0.14 * (N - 2000)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>  
+    
+     <label for="calc_notes">Notes: </label><input type="number" id="calc_notes" min="0" onchange="get_total()"> &emsp; 
+	  <label for="calc_total"> TOTAL: </label><input type="number" id="calc_total" readonly>
+	  
+	  <script>
+	  function get_total() {
+		let n = document.getElementById("calc_notes").value;
+		
+		if (n <= 1000) { document.getElementById("calc_total").value = (250 + 0.08*n);} 
+		else if (n <= 2000) { document.getElementById("calc_total").value = (330 + 0.11*(n-1000)); }
+		else { document.getElementById("calc_total").value = (440 + 0.14*(n-2000)); }
+		
+		return; } </script>
 
     <!--
     <div style="width:45%; display:inline-block; float:right;">
