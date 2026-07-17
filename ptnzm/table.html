@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>PTNZM</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="bmstable" content="header.json" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.xz.style/serve/inter.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/v/dt/dt-2.1.3/datatables.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header data-include-html="../assets/components/header.html"></header>
+
+    <!-- Main Contents -->
+    <h2>Sabun by 패터너즘</h2>
+    <p>
+      <a href="https://haksa.sadoljoa.co.kr/">디맥사이버대학교</a>의 리듬게임 패턴제작 동아리 패터너즘 구성원들의 작품을 모아두었습니다..<br>
+      분홍색은 osu! mania 패턴입니다.<br>
+
+
+    <!--
+    <div style="width:45%; display:inline-block; float:right;">
+      <h4 style="text-align:center;">#TOTAL Calculation</h4>
+    </div>
+    -->
+    <p style="clear: both;"></p>
+    </p>
+    
+    <hr />
+    <details>
+      <summary>Changelog</summary>
+      <textarea name="changelogText" id="changelogText" readonly></textarea>
+    </details>
+    <div class="tableframe">
+      <table id="tableDiff" class="display compact"></table>
+    </div>
+    <hr />
+    <!-- Footer -->
+    <footer data-include-html="../assets/components/footer.html"></footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/include_html.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@4.0.0-beta/dist/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.datatables.net/v/dt/dt-2.1.3/datatables.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.datatables.net/plug-ins/2.1.3/sorting/enum.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../assets/js/table.js"></script>
+  </body>
+</html>
