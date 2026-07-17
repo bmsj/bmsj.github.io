@@ -206,19 +206,19 @@ const DEFAULT_COLUMNS = [
   },
   {
     title: "Title<br />(Qwilight IR)",
-    width: "30%",
+    width: "20%",
     data: "title",
     render: tableData.tableTitle,
   },
   {
     title: "Artist<br />(BMS DL)",
-    width: "20%",
+    width: "15%",
     data: "artist",
     render: tableData.tableArtist,
   },
   {
     title: "Sabun Artist",
-    width: "20%",
+    width: "15%",
     data: "sabun_artist",
     render: tableData.tableSabunArtist,
   },
