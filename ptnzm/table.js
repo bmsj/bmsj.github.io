@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("meta[name=bmstable]").getAttribute("content")
     );
     const header = await response.json();
-    document.getElementById("changelogText").value = "Loading...";
     if (header.symbol) mark = header.symbol;
     if (header.data_url) data_link = header.data_url;
     if (header.level_order) {
