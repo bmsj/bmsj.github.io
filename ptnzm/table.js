@@ -52,8 +52,6 @@ function makeBMSTable() {
     },
 
     initComplete: function () {
-      // Make Changelog
-      makeChangelog(table);
       // Filter
       makeFilter(table);
     },
@@ -103,14 +101,6 @@ function makeFilter(table) {
     });
 }
 
-// Date Format
-function formatDateString(dateStr) {
-  const date_ = new Date(dateStr);
-  const year = date_.getFullYear();
-  const month = String(date_.getMonth() + 1).padStart(2, "0");
-  const day = String(date_.getDate()).padStart(2, "0");
-  return `${year}.${month}.${day}`;
-}
 
 const tableData = {
   tableLevel: function (data) {
