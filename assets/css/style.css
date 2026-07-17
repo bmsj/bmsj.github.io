@@ -93,7 +93,7 @@ table.dataTable.display tbody tr.state2 {
 }
 
 table.dataTable.display tbody tr.state3 {
-  background-color: #FBCFD0;
+  background-color: #FF8EE6;
 }
 
 @media (prefers-color-scheme: dark) {
