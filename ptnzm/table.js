@@ -108,13 +108,13 @@ const tableData = {
   },
 
  tableTitle: function (data, type, row) {
-    if (row.md5) {
+   let sabunName = row.sabun_name;
+   if (row.md5) {
       let irURL = "https://ez2pattern.kr/bms/ir/qwilight?md5=";
       irURL += row.md5;
-      let sabunName = row.sabun_name;
       return `<a href='${irURL}' target='_blank'>${data} ${sabunName}</a>`;
     } else {
-      return (data + sabunName);
+      return (data + " " + sabunName);
     }
   },
 
