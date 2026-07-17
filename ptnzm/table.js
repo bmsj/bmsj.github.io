@@ -114,7 +114,7 @@ const tableData = {
       irURL += row.md5;
       return `<a href='${irURL}' target='_blank'>${data} ${sabunName}</a>`;
     } else {
-      return (data + " " + sabunName);
+      return `${data} ${sabunName}`;
     }
   },
 
