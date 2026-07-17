@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // BMS table
 function makeBMSTable() {
-  let table = new DataTable("#tableDiff_p", {
+  let table = new DataTable("#tableDiff", {
     paging: false,
     info: false,
     lengthChange: false,
