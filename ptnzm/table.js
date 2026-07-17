@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // BMS table
 function makeBMSTable() {
-  let table = new DataTable("#tableDiff", {
+  let table = new DataTable("#tableDiff_p", {
     paging: false,
     info: false,
     lengthChange: false,
@@ -119,6 +119,12 @@ const tableData = {
     }
   },
 
+  tableType: function (data) {
+    if (data) {
+      return data;
+    } else {return " ";}
+  },
+  
   tableScore: function (data) {
     let scoreURL = "https://ez2pattern.kr/bms/chart?md5=";
     scoreURL += data;
@@ -150,21 +156,15 @@ const tableData = {
   },
 
   tableSabunArtist: function (data) {
-    return data;
+    if (data) {
+      return data;
+    } else {return " ";}
   },
 
   tableChart: function (data, type, row) {
-    if (row.url_diff) {
       if (data) {
-        return `<a href='${row.url_diff}' target='_blank'>${data}</a>`;
-      } else {
-        return `<a href='${row.url_diff}'>DL</a>`;
-      }
-    } else {
-      if (data) {
-        return data;
-      } else return "　";
-    }
+        return `<a href='${data}'>DL</a>`;
+      } else {return "　";}
   },
 
   tableComment: function (data, type, row) {
@@ -199,6 +199,12 @@ const DEFAULT_COLUMNS = [
     render: tableData.tableMovie,
   },
   {
+    title: "Type",
+    width: "10%",
+    data: "type",
+    render: tableData.tableType,
+  },
+  {
     title: "Title<br />(Qwilight IR)",
     width: "30%",
     data: "title",
@@ -219,7 +225,7 @@ const DEFAULT_COLUMNS = [
   {
     title: "DL",
     width: "1%",
-    data: "name_diff",
+    data: "url_diff",
     className: "text-nowrap",
     render: tableData.tableChart,
   },
@@ -227,5 +233,5 @@ const DEFAULT_COLUMNS = [
     title: "Comment",
     width: "25%",
     render: tableData.tableComment,
-  },
+  }
 ];
