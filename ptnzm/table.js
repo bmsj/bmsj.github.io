@@ -4,6 +4,7 @@ let data_link = "";
 const nowLang = navigator.language.slice(0, 2);
 const languagePrefix =
   nowLang === "ko" ? "ko" : nowLang === "ja" ? "ja" : "en-GB";
+
 document.addEventListener("DOMContentLoaded", function () {
   async function getJSON() {
     const response = await fetch(
@@ -114,7 +115,7 @@ const tableData = {
       let sabunName = row.sabun_name;
       return `<a href='${irURL}' target='_blank'>${data} ${sabunName}</a>`;
     } else {
-      return `${data} ${sabunName}`;
+      return (data + sabunName);
     }
   },
 
