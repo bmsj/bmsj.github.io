@@ -173,7 +173,7 @@ const tableData = {
 
 const DEFAULT_COLUMNS = [
   {
-    title: "Level",
+    title: "Phase",
     width: "10%",
     data: "level",
     type: "natural",
