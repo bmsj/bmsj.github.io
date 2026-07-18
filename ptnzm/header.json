@@ -1,6 +1,6 @@
 {
   "name": "PTNZM",
   "symbol": "",
-  "level_order": ["Phase 1 - Choice", "Phase 1 - Free", "Phase 2 - Choice", "Phase 2 - Free"],
+  "level_order": ["Phase 1 - Choice", "Phase 1 - Free", "Phase 2 - Choice", "Phase 2 - Free", "Phase 3 - Choice", "Phase 3 - Free", "Phase 4 - Choice", "Phase 4 - Free", "Phase 5 - Choice", "Phase 5 - Free",],
   "data_url": "https://script.google.com/macros/s/AKfycbxRaD8aAXoLSiu8Bptfmjf2FbXkT7RZtZg_JxMakkwSdVqeaBy1a1EXfxffRWe8RshcKQ/exec"
 }
