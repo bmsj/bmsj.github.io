@@ -132,7 +132,7 @@ const tableData = {
 
   tableTitle: function (data, type, row) {
     let lr2irURL =
-      "http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=";
+      "https://ir.stellabms.xyz/charts/";
     let sabunName = row.sabun_name;
     lr2irURL += row.md5;
     return `<a href='${lr2irURL}' target='_blank'>${data} ${sabunName}</a>`;
@@ -243,7 +243,7 @@ const DEFAULT_COLUMNS = [
     render: tableData.tableMovie,
   },
   {
-    title: "Title<br />(LR2IR)",
+    title: "Title<br />(Stella IR)",
     width: "30%",
     data: "title",
     render: tableData.tableTitle,
